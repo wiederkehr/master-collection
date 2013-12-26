@@ -1,0 +1,116 @@
+// NAVIGATION
+/////////////////////////////////////////////////////////////////*/
+#nav {
+  height: 30px;
+  background: #222222;
+  @include fixed(30px, 10001);
+  @extend .navigation;
+  @include box-shadow(rgba(0, 0, 0, 0), 0 0 0);
+  @include transition-property(box-shadow);
+  @include transition-duration(0.8s);
+  .filter_label{
+    color: $color_text_medium;
+    margin: 5px 5px 5px 20px;
+    line-height: 20px;
+    @include inline-block;
+  }
+  #primary{
+    @include inline-block;
+    float: left;
+    ul#primary_filter {
+      @include clearfix;
+      margin-left: 0;
+      li {
+        width: 100px;
+        height: 20px;
+        border-right: none;
+        margin: 5px 5px 5px 0;
+        float: left;
+        text-align: center;
+        a {
+          color: $color_text_light;
+          height: 20px;
+          line-height: 20px;
+          padding: 0 10px;
+          background: #333; 
+          text-transform: none;
+          @include background(linear-gradient(#444, #333));
+          @include border-radius(10px);
+          }
+        a:hover {
+          color: $color_text_superlight;
+          @include background(linear-gradient(#555, #444));
+        } 
+        a.selected {
+          color: #fff;
+          font-weight: bold;
+          @include background(linear-gradient(#444, #555));
+          @include box-shadow(rgba(#000, 0.2) 0 1px 0px 0px inset);
+        }
+        a.selected:hover {
+          @include background(linear-gradient(#444, #555));
+        }
+      }
+      li:first-child {
+        width: 100px; 
+        margin-right: 20px;
+      }
+    }
+  }
+  #secondary{
+    float:right;
+    @include inline-block;
+    ul#secondary_filter{
+      @include clearfix;
+      @include inline-block;
+      margin-left: 0;
+      li {
+        width: 40px;
+        height: 20px;
+        border-right: none;
+        margin: 5px 0;
+        float: left;
+        text-align: center;
+        a {
+          color: $color_text_light;
+          height: 20px;
+          line-height: 20px;
+          padding: 0 10px;
+          background: #333; 
+          text-transform: none;
+          @include background(linear-gradient(#444, #333));
+          }
+        a:hover {
+          color: $color_text_superlight;
+          @include background(linear-gradient(#555, #444));
+        } 
+        a.selected {
+          color: #fff;
+          font-weight: bold;
+          @include background(linear-gradient(#444, #555));
+          @include box-shadow(rgba(#000, 0.2) 0 1px 0px 0px inset);
+        }
+        a.selected:hover {
+          @include background(linear-gradient(#444, #555));
+        }
+      }
+      li:first-child {
+        margin-right: 1px;
+        a{
+          @include border-top-left-radius(10px);
+          @include border-bottom-left-radius(10px);
+        }
+      }
+      li:last-child {
+        margin-right: 0px;
+        a{
+          @include border-top-right-radius(10px);
+          @include border-bottom-right-radius(10px);
+        }
+      }
+    }
+  }
+}
+#nav.overlayed {
+  @include box-shadow(rgba(0,0,0,0.4) 0px 5px 10px);
+}

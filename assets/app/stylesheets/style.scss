@@ -1,0 +1,25 @@
+/*  
+Theme Name: Datavisualization.ch 2010
+Theme URI: http://datavisualization.ch/
+Description: Design for the Data Visualization and Infographics Magazine Datavisualization.ch
+Version: 1.2
+Author: Interactive Things
+Author URI: http://interactivethings.com/
+Updated: 111012_BW
+*/
+
+// DEFINE VARIABLES & MIXINS
+/////////////////////////////////////////////////////////////////*/
+@import "base";
+
+// RESET ALL STYLES
+/////////////////////////////////////////////////////////////////*/
+@include global-reset;
+
+// SPECIFIC STYLES
+/////////////////////////////////////////////////////////////////*/
+@import "library/all";
+@import "general/all";
+@import "structure/all";
+@import "components/all";
+@import "overrides/all";

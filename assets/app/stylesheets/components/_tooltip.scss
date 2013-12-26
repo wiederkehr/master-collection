@@ -1,0 +1,43 @@
+// SINGLE
+/////////////////////////////////////////////////////////////////*/
+.ui-tooltip-datavis{
+  border: 0;
+}
+.ui-tooltip-datavis .ui-tooltip-titlebar,
+.ui-tooltip-datavis .ui-tooltip-content{
+  _margin-bottom: 0; /* IE6 */
+  .margin-bottom: 0; /* IE7 */
+
+  background: transparent;
+  background: rgba(0, 0, 0, .87);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#D9000000,endColorstr=#D9000000);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#D9000000,endColorstr=#D9000000)";
+
+  color: white;
+  border: 0px transparent;
+
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 16px;
+  text-shadow: 0 1px black;
+  max-width: 120px;
+  @include border-radius;
+}
+
+.ui-tooltip-datavis .ui-tooltip-titlebar{
+  padding: 6px 35px 0 10;
+}
+
+.ui-tooltip-datavis .ui-tooltip-content{
+  padding: 6px 10;
+  @include single-box-shadow;
+}
+
+.ui-tooltip-datavis .ui-tooltip-icon{
+  border-color: #222;
+  text-shadow: none;
+}
+
+.ui-tooltip-datavis .ui-tooltip-titlebar .ui-state-hover{
+  border-color: #303030;
+}

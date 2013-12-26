@@ -1,0 +1,168 @@
+// TYPOGRAPHY
+/////////////////////////////////////////////////////////////////*/
+html, body {
+  color: $color_text_dark; }
+
+body {
+  font: 75% "Helvetica", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+// HEADINGS
+/////////////////////////////////////////////////////////////////*/
+h1 {
+  font-size: 30px;
+  line-height: 1;
+  font-weight: bold; }
+
+h2 {
+  font-size: 24px;
+  line-height: 1;
+  font-weight: bold; }
+
+h2 a:hover {
+  color: $color_text_dark; }
+
+h3 {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: bold; }
+
+h4 {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: bold; }
+
+// TEXT ELEMENTS
+/////////////////////////////////////////////////////////////////*/
+a {
+  color: $color_text_dark;
+  text-decoration: none;
+  font-weight: bold; }
+
+a:focus, a:active, a:hover {
+  color: $color_corporate;
+  border: none;
+  outline: none; }
+
+p {
+  margin: 0 0 1.5em; }
+
+form p {
+  margin: 0; }
+
+hr {
+  height: 1px;
+  padding: 0;
+  margin: 9px 0 10px;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid $color_border_light; }
+
+blockquote {
+  margin: 1.5em;
+  color: $color_text_light;
+  font: italic 14px / 18px "Georgia", Georgia, serif; }
+
+strong {
+  font-weight: bold; }
+
+em, dfn {
+  font-style: italic; }
+
+dfn {
+  font-weight: bold; }
+
+sup, sub {
+  line-height: 0; }
+
+abbr, acronym {
+  border-bottom: 1px dotted $color_text_dark; }
+
+address {
+  margin: 0 0 1.5em;
+  font-style: italic; }
+
+del {
+  color: $color_text_light; }
+
+pre {
+  margin: 1.5em 0;
+  white-space: pre; }
+
+pre, code, tt {
+  font: 1em "andale mono", "lucida console", monospace;
+  line-height: 1.5; }
+
+li ul, li ol {
+  margin: 0; }
+
+ul, ol {
+  margin: 0 1.5em 1.5em 0;
+  padding-left: 3.333em; }
+
+ul {
+  list-style-type: disc; }
+
+ol {
+  list-style-type: decimal; }
+
+dl {
+  margin: 0 0 1.5em 0; }
+
+dl dt {
+  font-weight: bold; }
+
+dd {
+  margin-left: 1.5em; }
+
+// TABLES
+/////////////////////////////////////////////////////////////////*/
+table {
+  margin-bottom: 1.4em;
+  width: 100%; }
+
+th {
+  font-weight: bold; }
+
+th, td {
+  padding: 4px 10px 4px 5px; }
+
+tfoot {
+  font-style: italic; }
+
+// FORMS
+/////////////////////////////////////////////////////////////////*/
+label {
+  font-size: 11px;
+  font-weight: normal;
+  color: $color_text_dark;
+  line-height: 1;
+  text-transform: uppercase; }
+
+input {
+  outline: none;
+  border: 1px solid $color_border_light;
+  padding: 5px;
+  margin: 0 0 20px;
+  width: 338px;
+  font: 12px / 1.5 "Helvetica", Helvetica, Arial, sans-serif; }
+
+textarea {
+  outline: none;
+  border: 1px solid $color_border_light;
+  padding: 5px;
+  margin: 0 0 20px;
+  width: 338px;
+  font: 12px / 1.5 "Helvetica", Helvetica, Arial, sans-serif; }
+
+input:focus, textarea:focus {
+  border-color: $color_text_light; }
+
+// SELECTIONS
+/////////////////////////////////////////////////////////////////*/
+::selection {
+  background: lighten($color_corporate, 45%); }
+
+::-moz-selection {
+  background: lighten($color_corporate, 45%); }

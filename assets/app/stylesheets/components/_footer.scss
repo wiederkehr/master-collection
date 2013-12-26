@@ -1,0 +1,38 @@
+#footer {
+  @extend .lead;
+  @include clearfix;
+  color: $color_text_superlight;
+  font-size: 11px;
+  a {
+    color: $color_text_light; }
+  a:hover {
+    color: $color_text_dark; }
+  ul {
+    @extend .icon_links;
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      border-bottom: 1px solid $color_border_light; 
+      padding: 5px 0;
+      height: 20px;
+    } 
+  }
+  h3 span {
+    padding: 0;
+    font-size: 9px;
+    text-transform: none;
+    float: right;
+    position: relative;
+    top: 1px; 
+  }
+  #about{
+    @include column(480px);
+    float: left;
+  }
+  #share{
+    @include column(230px);
+    float: left;
+    margin-left: 20px;
+  }
+}

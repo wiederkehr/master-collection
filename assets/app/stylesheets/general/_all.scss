@@ -1,0 +1,35 @@
+/*
+GENERAL STYLESHEET
+Description:  Global styling for the Website
+Author:       Interactive Things
+Created:      110504_BW
+Updated:      120125_BW
+*/
+@import "general/typography";
+
+// LEGACY
+/////////////////////////////////////////////////////////////////*/
+img.border, a img.border {
+  @extend .border_image; }
+
+a:hover img.border {
+  @extend .border_image_active; }
+
+.floatleft {
+  float: left;
+  margin: 3px 10px 0 0; }
+
+.floatright {
+  float: right;
+  margin: 3px 0 0 10px; }
+
+.clearfix:after, .container:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  overflow: hidden; }
+
+.clearfix, .container {
+  display: block; }
