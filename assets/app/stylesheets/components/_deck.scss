@@ -1,140 +1,8 @@
 // DECK
 /////////////////////////////////////////////////////////////////*/
-#deck {
-  #cards{
-    @include pie-clearfix;
-    padding-top:30px;
-  }
+.cards{
+  @include pie-clearfix;
 }
-// CARD
-/////////////////////////////////////////////////////////////////*/
-.card {
-  height: 280px;
-  margin: 0 10px 20px 10px;
-  position: relative;
-  width: 225px;
-  cursor: pointer;
-  @include perspective(600px);
-  h3{
-    font-size: 14px;
-    font-weight: bold;
-    margin: 20px 10px 10px;
-  }
-  h4{
-    margin: 20px 10px 0px;
-    font-size: 12px;
-    text-transform: uppercase;
-  }
-  strong{
-    font-size: 12px;
-    text-transform: uppercase;
-  }
-  p{
-    margin: 0 10px 10px;
-  }
-  a{
-    color: $color_text_light;
-    font-weight: normal;
-    background: transparent url(../images/link_icon.png) 0 -38px no-repeat;
-    padding-left:15px;
-    &:hover{
-      color: $color_corporate;
-      background-position: 0 -58px;
-    };
-  }
-  ul{
-    margin: 3px 10px 10px;
-    padding: 0 0 0 2px;
-    list-style: none;
-    color: $color_text_light;
-    li a{
-      font-weight: normal;
-    }
-  }
-  img{
-    margin: 0;
-  }
-  .front,.back{
-    float: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: inherit;
-    height: inherit;
-    border: 1px solid $color_border_light;
-    padding: 1px;
-    @include transform-style(preserve-3d);
-    @include backface-visibility(hidden);
-    @include single-box-shadow;
-    @include transition-duration("0.5s, 0.2s");
-    @include transition-property(transform box-shadow);
-  }
-  .front{
-    z-index: 900;
-    background: #fff;
-  	@include transform(rotateY(0deg));
-  	a{
-  	  visibility: hidden;
-  	}
-  }
-  &.flip .front{
-    z-index: 900;
-    @include transform(rotateY(180deg));
-  }
-  .back{
-    z-index: 800;
-    border-color: $color_border_dark;
-    background: $color_corporate;
-    border-color: darken($color_corporate, 5%);
-    color: #fff;
-    a{
-      background-position: 0 2px;
-      color: rgba(255,255,255,0.75);
-      &:hover{
-        color: rgba(255,255,255,1);
-        background-position: 0 -18px;
-      };
-    }
-    @include transform(rotateY(-180deg));
-  }
-  &.flip .back{
-    z-index: 1000;
-    @include transform(rotateY(0deg));
-    $default-box-shadow-color: rgba(0, 0, 0, 0.5);
-    $default-box-shadow-blur: 10px;
-    @include single-box-shadow;
-  }
-  .front:hover{
-    border-color: $color_border_dark;
-    $default-box-shadow-color: rgba(0, 0, 0, 0.3);
-    $default-box-shadow-blur: 5px;
-    @include single-box-shadow;
-    a{
-      visibility: visible;
-    }
-  }
-  .flip_back, .flip_front{
-    visibility: hidden;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 20px;
-    height: 20px;
-  }
-  .flip_front{
-    background: transparent url("../images/flip_icon.png") 0 0 no-repeat;
-  }
-  .flip_back{
-    background: transparent url("../images/flip_icon.png") 0 -30px no-repeat;
-  }
-  &:hover{
-    z-index: 1000;
-    .flip_back, .flip_front{
-      visibility: visible;
-    }
-  }
-}
-
 // ISOTOPE
 /////////////////////////////////////////////////////////////////*/
 .isotope-item {
@@ -144,7 +12,6 @@
   pointer-events: none;
   z-index: 1;
 }
-
 .isotope,
 .isotope .isotope-item {
   @include transition-duration(0.8s);
@@ -159,31 +26,4 @@
 .isotope.no-transition .isotope-item,
 .isotope .isotope-item.no-transition {
   @include transition-duration(0s);
-}
-
-// POPULARITY
-/////////////////////////////////////////////////////////////////*/
-.popularity_chart{
-  margin: 10px;
-  padding: 0 0 0 20px;
-}
-.popularity_track{
-  background: rgba(0,0,0,0.1);
-  display: block;
-  height: 10px;
-}
-.popularity_bar{
-  background: rgba(0,0,0,0.1);
-  display: block;
-  height: 10px;
-  width: 50%;
-}
-.github_watchers{
-  background: transparent url("../images/watch_icon.png") 0 4px no-repeat;
-  padding: 0 0 0 18px;
-  @include inline-block;
-  margin: 0 0 0 2px;
-}
-a:hover .github_watchers{
-  background: transparent url("../images/watch_icon.png") 0 -16px no-repeat;
 }

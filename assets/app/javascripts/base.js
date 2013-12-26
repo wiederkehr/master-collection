@@ -1,30 +1,28 @@
 $(document).ready(function(){
+  var title_on_top = 'Research Visualization'
+  var title_down = '<span class="icon-arrow-up"></span> Research Visualization'
   /* FIXED HEADER
   /////////////////////////////////////////////////////////////////*/
   $(window).scroll(function (event) {
     var y = $(this).scrollTop();
     if (y > 50) {
-      $('#header h1 a').attr('href', '#header');
-      var logoSrc = $('#header h1 a img').attr('src').replace('datavisualization_logo.png', 'datavisualization_up.png');
-      $('#header h1 a img').attr('src', logoSrc);
-      $('#header').addClass('overlayed');
-      $('#nav').addClass('overlayed');
+      $('.header__title__link').attr('href', '#header');
+      $('.header__title__link').html(title_down);
+      $('.header, .navigation').addClass('overlayed');
     } else {
-      $('#header h1 a').attr('href', '/');
-      var logoSrc = $('#header h1 a img').attr('src').replace('datavisualization_up.png', 'datavisualization_logo.png');
-      $('#header h1 a img').attr('src', logoSrc);
-      $('#header').removeClass('overlayed');
-      $('#nav').removeClass('overlayed');
+      $('.header__title__link').attr('href', '/');
+      $('.header__title__link').html(title_on_top);
+      $('.header, .navigation').removeClass('overlayed');
     }
   });
-  $('#header h1 a[href*="header"]').live('click', function(){
+  $('.header__title__link[href*="header"]').live('click', function(){
     $('html, body').animate({scrollTop:0},{duration:500, queue:true, complete:function(){
-      $('#header h1 a').attr('href', '/');
+      $('.header__title__link').attr('href', '/');
       }
     });
     return false;
   });
-  $('#nav li a').qtip({
+  $('.navigation__link').qtip({
     show: {
       delay: 300,
       effect: "fade"

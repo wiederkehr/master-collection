@@ -1,0 +1,19 @@
+// SEARCH
+/////////////////////////////////////////////////////////////////*/
+.search__form {
+  position: absolute;
+  right: 40px;
+  top: 4px;
+  z-index: 3;
+}
+.search__field{
+  @include border-radius(10px);
+  font: 12px / 1.4 "Helvetica", Helvetica, Arial, sans-serif;
+  height: 22px;
+  padding: 3px 5px;
+  width: 167px; 
+
+}
+.search__field::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}

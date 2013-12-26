@@ -1,0 +1,6 @@
+@mixin fix($top_pos: 0px, $z_id: 10000) {
+  position: fixed;
+  top: $top_pos;
+  width: 100%;
+  z-index: $z_id; 
+}

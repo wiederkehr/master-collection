@@ -1,38 +1,48 @@
-#footer {
-  @extend .lead;
-  @include clearfix;
+.footer {
+  @include pie-clearfix;
   color: $color_text_superlight;
   font-size: 11px;
-  a {
-    color: $color_text_light; }
-  a:hover {
-    color: $color_text_dark; }
-  ul {
-    @extend .icon_links;
-    margin: 0;
-    padding: 0;
-    li {
-      list-style: none;
-      border-bottom: 1px solid $color_border_light; 
-      padding: 5px 0;
-      height: 20px;
-    } 
+}
+.footer__container {
+  @include container;
+}
+.footer__section__heading{
+  border-bottom: 1px solid $color_border_light;
+  font-weight: normal;
+  font-size: 11px;
+  margin-bottom: 1px;
+  text-transform: uppercase;
+}
+.footer__section--about{
+  padding-right: 40px;
+  .lead{
+    color: $color_text_light;
+    font: italic 14px / 16px "Georgia", Georgia, serif;
+    a{
+      color: $color_text_light; 
+      font-weight: normal;
+      &:hover {
+        color: $color_text_dark; 
+      }
+    }
   }
-  h3 span {
-    padding: 0;
-    font-size: 9px;
-    text-transform: none;
-    float: right;
-    position: relative;
-    top: 1px; 
-  }
-  #about{
-    @include column(480px);
-    float: left;
-  }
-  #share{
-    @include column(230px);
-    float: left;
-    margin-left: 20px;
-  }
+}
+.footer__section--share{
+}
+.share__list{
+  font-size: 11px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.share__list__item{
+  list-style: none;
+  border-bottom: 1px solid $color_border_light;
+  padding: 5px 0;
+  height: 20px;
+}
+.share__list__item__link{
+  display: block;
+  height: 18px;
+  padding: 4px 0 0 0;
 }

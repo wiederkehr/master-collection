@@ -1,0 +1,9 @@
+// DECK
+/////////////////////////////////////////////////////////////////*/
+.content {
+}
+.content__container {
+  @include container;
+  @include pie-clearfix;
+  padding-top: 60px;
+}

@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <!-- ——————————————————————————————————————————————————————————————————— META -->
-  <title>Datavisualization.ch Selected Tools</title>
+  <title>Research Visualization Collection</title>
   <meta charset="utf-8">
-  <meta name="description" content="Datavisualization.ch Selected Tools is a collection of tools that we, the people behind Datavisualization.ch, work with on a daily basis and recommend warmly.">
+  <meta name="description" content="Research Visualization Collection">
   <!-- ——————————————————————————————————————————————————————————————————— CSS -->
   <link rel="stylesheet" type="text/css" media="all" href="assets/vendor/jquery.qtip/jquery.qtip.css" />
   <link rel="stylesheet" type="text/css" media="all" href="assets/app/stylesheets/style.css" />
@@ -24,1165 +24,139 @@
   </script>
 </head>
 <body>
-  <div id="header">
-    <div class="container">
-      <h1>
-        <a href="/" title="Datavisualization.ch">
-          <img src="assets/app/images/datavisualization_logo.png" />
-        </a>
+  <header id="header" class="header">
+    <div class="header__container">
+      <h1 class="header__title">
+        <a class="header__title__link" href="/" title="Datavisualization.ch">Research Visualization</a>
       </h1>
-      <h2>Selected Tools</h2>
-      <form method="get" id="search_form">
-        <input type="search" name="s" placeholder="Search…" id="search_field" />
+      <h2 class="header__subtitle">Collection</h2>
+      <form method="get" class="search__form">
+        <input type="search" name="s" placeholder="Search…" class="search__field"/>
       </form>
-    </div><!-- .container -->
-  </div><!-- #header -->
-  <div id="nav">
-    <div class="container">
-      <div id="primary">
-        <ul id="primary_filter" class="option-set" data-filter-group="type">
-          <li><a href="#" data-filter="*" title="View all tools" class="selected">All</a></li>
-          <li><a href="#" data-filter=".maps" title="Tools that help you to plot data on maps.">Maps</a></li>
-          <li><a href="#" data-filter=".charts" title="Tools to create charts, graphs and diagrams.">Charts</a></li>
-          <li><a href="#" data-filter=".data" title="Tools that simplify the handling of data.">Data</a></li>
-          <li><a href="#" data-filter=".color" title="Tools that help you with color selection.">Color</a></li>
+    </div><!-- .header__container -->
+  </header><!-- #header -->
+  <nav class="navigation">
+    <div class="navigation__container">
+      <div class="navigation__column navigation__column--primary">
+        <ul class="navigation__list option-set" data-filter-group="type">
+          <li class="navigation__item"><a class="navigation__link" href="#" data-filter="*" title="View all tools" class="selected">All</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#" data-filter=".maps" title="Tools that help you to plot data on maps.">Maps</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#" data-filter=".charts" title="Tools to create charts, graphs and diagrams.">Charts</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#" data-filter=".data" title="Tools that simplify the handling of data.">Data</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#" data-filter=".color" title="Tools that help you with color selection.">Color</a></li>
         </ul><!-- #primary_filter -->
       </div>
-      <div id="secondary">
-        <span class="filter_label" id="secondary_filter_label">Code?</span>
-        <ul id="secondary_filter" class="option-set" data-filter-group="code">
-          <li><a href="#" data-filter="" title="I am happy to write some code on my own." class="selected">&#x2714;</a></li>
-          <li><a href="#" data-filter=":not('.code')" title="I don't want to bother even looking at programming code.">&#x2718;</a></li>
+      <div class="navigation__column navigation__column--secondary">
+        <span class="navigation__label" id="secondary_filter_label">Code?</span>
+        <ul class="navigation__list option-set" data-filter-group="code">
+          <li class="navigation__item"><a class="navigation__link" href="#" data-filter="" title="I am happy to write some code on my own." class="selected">&#x2714;</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#" data-filter=":not('.code')" title="I don't want to bother even looking at programming code.">&#x2718;</a></li>
       </div>
       </ul>
     </div><!-- .container -->
-  </div><!-- #nav -->
-  <div id="content">
-    <div class="container clearfix">
-      <div id="main" class="wide">
-        <div class="section clearfix">
-          <div class="article">
-            <div id="deck">
-              <div id="cards" class="row bottom">
-                <div class="card maps">
-                  <div class="front">
-                    <img src="media/images/geo_common_thumbnail.png" width="225" height="140">
-                    <h3 class="tool_name">GeoCommons</h3>
-                    <p>A public community and set of tools to access, visualize and analyze data with compelling map visualizations.</p>
-                    <p><a href="http://geocommons.com/" title="Official Website">http://geocommons.com</a></p>
-                  </div>
-                  <div class="back">
-                    <h3>GeoCommons</h3>
-                    <p>
-                    <strong>Type: </strong>Web Application &amp; API<br/>
-                    <strong>Technology: </strong>JavaScript, Ruby<br/>
-                    <strong>License: </strong><a href="http://geocommons.com/help/Open_Source">Various</a><br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://geocommons.com/" title="Official Website">Website</a></li>
-                      <li><a href="http://geocommons.com/api/" title="API Documentation">API Documentation</a></li>
-                      <li><a href="http://github.com/geocommons/" title="GitHub User">GitHub User</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="card maps charts data">
-                  <div class="front">
-                    <img src="media/images/google_fusion_table_thumbnail.png" width="225" height="140">
-                    <h3 class="tool_name">Google Fusion Tables</h3>
-                    <p>A web application that makes it easy to host, manage, collaborate on, visualize, and publish data tables.</p>
-                    <p><a href="http://www.google.com/fusiontables" title="Official Website">http://www.google.com/fusiontables</a></p>
-                  </div>
-                  <div class="back">
-                    <h3>Google Fusion Tables</h3>
-                    <p>
-                    <strong>Type: </strong>Web Application &amp; API<br/>
-                    <strong>Technology: </strong>JavaScript, Flash<br/>
-                    <strong>License: </strong>Free to use<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://www.google.com/fusiontables/" title="Official Website">Website</a></li>
-                      <li><a href="https://sites.google.com/site/fusiontablestalks/stories/" title="Example Gallery">Example Gallery</a></li>
-                      <li><a href="https://developers.google.com/fusiontables/" title="API Documentation">API Documentation</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="card maps charts">
-                  <div class="front">
-                    <img src="media/images/google_chart_tools_thumbnail.png" width="225" height="140">
-                    <h3 class="tool_name">Google Chart Tools</h3>
-                    <p>A collection of simple to use,  customizable and free to use interactive charts and data tools.</p>
-                    <p><a href="https://developers.google.com/chart" title="Official Website">https://developers.google.com/chart</a></p>
-                  </div>
-                  <div class="back">
-                    <h3>Google Chart Tools</h3>
-                    <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>JavaScript<br/>
-                    <strong>License: </strong>Free to use<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="https://developers.google.com/chart/" title="Official Website">Website</a></li>
-                      <li><a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/" title="Charts Gallery">Charts Gallery</a></li>
-                      <li><a href="http://code.google.com/apis/ajax/playground/?type=visualization/" title="Code Playground">Code Playground</a></li>
-                      <li><a href="https://google-developers.appspot.com/chart/interactive/docs/reference/" title="API Reference">API Reference</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="card data">
-                  <div class="front">
-                    <img src="media/images/open_refine_thumbnail.png" width="225" height="140">
-                    <h3 class="tool_name">OpenRefine</h3>
-                    <p>A tool for working with data, cleaning it up, reformating it or extending it with web services.</p>
-                    <p><a href="http://openrefine.org" title="Official Website">http://openrefine.org</a></p>
-                  </div>
-                  <div class="back">
-                    <h3>OpenRefine</h3>
-                    <p>
-                    <strong>Type: </strong>Desktop Application<br/>
-                    <strong>Technology: </strong>Java<br/>
-                    <strong>License: </strong>Individual licenses for included dependencies<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://code.google.com/p/google-refine/" title="Official Website">Website</a></li>
-                      <li><a href="http://code.google.com/p/google-refine/wiki/DocumentationForUsers" title="Documentation for Users">Documentation for Users</a></li>
-                      <li><a href="http://code.google.com/p/google-refine/wiki/DocumentationForDevelopers" title="Documentation for Developers">Documentation for Developers</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="card data">
-                  <div class="front">
-                    <img src="media/images/impure_quadrigram_thumbnail.png" width="225" height="140">
-                    <h3 class="tool_name">Quadrigram</h3>
-                    <p>A visual programming language aimed to gather, process and visualize information.</p>
-                    <p><a href="http://www.quadrigram.com" title="Official Website">http://www.quadrigram.com</a></p>
-                  </div>
-                  <div class="back">
-                    <h3>Quadrigram</h3>
-                    <p>
-                    <strong>Type: </strong>Web Application<br/>
-                    <strong>Technology: </strong>Flash<br/>
-                    <strong>License: </strong>Commercial<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://www.quadrigram.com/" title="Quadrigram Website">Quadrigram Website</a></li>
-                      <li><a href="http://www.impure.com/" title="Impure Website">Impure Website</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="card maps charts">
-                  <div class="front">
-                    <img src="media/images/many_eyes_thumbnail.png" width="225" height="140">
-                    <h3 class="tool_name">Many Eyes</h3>
-                    <p>A web application to build, share and discuss graphic representation of user uploaded data.</p>
-                    <p><a href="http://www-958.ibm.com/software/data/cognos/manyeyes" title="Official Website">http://www-958.ibm.com/software/data/cognos/manyeyes</a></p>
-                  </div>
-                  <div class="back">
-                    <h3>Many Eyes</h3>
-                    <p>
-                    <strong>Type: </strong>Web Application<br/>
-                    <strong>Technology: </strong>Java, Flash<br/>
-                    <strong>License: </strong>Free to use<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://www-958.ibm.com/software/data/cognos/manyeyes" title="Official Website">Website</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="card maps charts">
-                  <div class="front">
-                    <img src="media/images/tableau_public_thumbnail.png" width="225" height="140">
-                    <h3 class="tool_name">Tableau Public</h3>
-                    <p>A desktop application to build and post interactive graphs, dashboards, maps and tables to the web.</p>
-                    <p><a href="Tableau Public" title="Official Website">http://www.tableausoftware.com/public</a></p>
-                  </div>
-                  <div class="back">
-                    <h3>Tableau Public</h3>
-                    <p>
-                    <strong>Type: </strong>Desktop Application<br/>
-                    <strong>Technology: </strong>Windows, JavaScript<br/>
-                    <strong>License: </strong>Free to use<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://www.tableausoftware.com/public/" title="Official Website">Website</a></li>
-                      <li><a href="http://www.tableausoftware.com/public/gallery" title="Gallery">Gallery</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="card charts">
-                  <div class="front">
-                    <img src="media/images/timeline_thumbnail.png" width="225" height="140">
-                    <h3 class="tool_name">Timeline.js</h3>
-                    <p>A tool to create timelines with data and media from different sources like Google Docs, Twitter, Flickr or Vimeo.</p>
-                    <p><a href="http://timeline.verite.co" title="Official Website">http://timeline.verite.co</a></p>
-                  </div>
-                  <div class="back">
-                    <h3>Timeline.js</h3>
-                    <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>JavaScript<br/>
-                    <strong>License: </strong>MPL<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://timeline.verite.co/" title="Official Website">Website</a></li>
-                      <li><a href="https://github.com/VeriteCo/TimelineJS" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="card code charts">
-                  <div class="front">
-                    <img src="media/images/gephi_thumbnail.png" width="225" height="140">
-                    <h3 class="tool_name">Gephi</h3>
-                    <p>A visualization and exploration platform for networks with dynamic and hierarchical graphs.</p>
-                    <p><a href="http://gephi.org" title="Official Website">http://gephi.org</a></p>
-                  </div>
-                  <div class="back">
-                    <h3>Gephi</h3>
-                    <p>
-                    <strong>Type: </strong>Desktop Application<br/>
-                    <strong>Technology: </strong>Windows, Linux, MacOS X, Java<br/>
-                    <strong>License: </strong>CDDL, GPL 3<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://gephi.org/" title="Official Website">Website</a></li>
-                      <li><a href="http://wiki.gephi.org/index.php/Main_Page/" title="Documentation">Documentation</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="card code data">
-                  <div class="front">
-                    <img src="media/images/miso_thumbnail.png" width="225" height="140">
-                    <h3 class="tool_name">Miso</h3>
-                    <p>A toolkit to expedite the creation of interactive storytelling and data visualisation content.</p>
-                    <p><a href="http://misoproject.com/" title="Official Website">http://misoproject.com/</a></p>
-                  </div>
-                  <div class="back">
-                    <h3>Miso</h3>
-                    <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>JavaScript<br/>
-                    <strong>License: </strong>MIT, GPL 2<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://misoproject.com/" title="Official Website">Website</a></li>
-                      <li><a href="https://github.com/misoproject/" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="card code data">
-                  <div class="front">
-                    <img src="media/images/data_thumbnail.png" width="225" height="140">
-                    <h3 class="tool_name">Data.js</h3>
-                    <p>A data representation framework providing a uniform interface to domain data.</p>
-                    <p><a href="http://substance.io/michael/data-js" title="Official Website">http://substance.io/michael/data-js</a></p>
-                  </div>
-                  <div class="back">
-                    <h3>Data.js</h3>
-                    <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>JavaScript<br/>
-                    <strong>License: </strong>MIT<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://substance.io/michael/data-js" title="Official Website">Website</a></li>
-                      <li><a href="https://github.com/michael/data" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="card code charts">
-                  <div class="front">
-                    <img src="media/images/dance_thumbnail.png" width="225" height="140">
-                    <h3 class="tool_name">Dance.js</h3>
-                    <p>A simple data-driven visualization framework based on Data.js and Underscore.js</p>
-                    <p><a href="https://github.com/michael/dance" title="GitHub Repository" class="github_repository">https://github.com/michael/dance</a></p>
-                  </div>
-                  <div class="back">
-                    <h3>Dance.js</h3>
-                    <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>JavaScript<br/>
-                    <strong>License: </strong>MIT<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="https://github.com/michael/dance" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                      <li><a href="http://quasipartikel.at/2012/04/25/dancing-with-data/" title="Dancing With Data">Tutorial by Michael Aufreiter</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="card code charts">
-                  <div class="front">
-                    <img src="media/images/sigmajs_thumbnail.png" width="225" height="140">
-                    <h3 class="tool_name">Sigma.js</h3>
-                    <p>An open-source lightweight library to display interactively static and dynamic graphs.</p>
-                    <p><a href="http://sigmajs.org" title="Official Website">http://sigmajs.org</a></p>
-                  </div>
-                  <div class="back">
-                    <h3>Sigma.js</h3>
-                    <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>JavaScript<br/>
-                    <strong>License: </strong>MIT<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://sigmajs.org/" title="Official Website">Website</a></li>
-                      <li><a href="https://github.com/jacomyal/sigma.js/" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="card code charts">
-                  <div class="front">
-                    <img src="media/images/arbor_thumbnail.png" width="225" height="140">
-                    <h3 class="tool_name">Arbor.js</h3>
-                    <p>A library of force-directed layout algorithms plus abstractions for graph organization and refresh handling.</p>
-                    <p><a href="http://arborjs.org" title="Official Website">http://arborjs.org</a></p>
-                  </div>
-                  <div class="back">
-                    <h3>Arbor.js</h3>
-                    <p>
-                      <strong>Type: </strong>Library<br/>
-                      <strong>Technology: </strong>JavaScript<br/>
-                      <strong>License: </strong>MIT<br/>
-                    </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://arborjs.org" title="Official Website">Website</a></li>
-                      <li><a href="http://arborjs.org/reference" title="Reference">Refrence</a></li>
-                      <li><a href="https://github.com/samizdatco/arbor" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                    </ul>
-                  </div>
-                </div>
-              <div class="card maps code charts data">
-                <div class="front">
-                  <img src="media/images/d3_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">D3.js</h3>
-                    <p>An small, flexible and efficient library to create and manipulate interactive documents based on data.</p>
-                    <p><a href="http://mbostock.github.com/d3" title="Official Website">http://mbostock.github.com/d3</a></p>
-                </div>
-                <div class="back">
-                  <h3>D3.js</h3>
-                    <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>JavaScript<br/>
-                    <strong>License: </strong>BSD<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://mbostock.github.com/d3" title="Official Website">Website</a></li>
-                      <li><a href="https://github.com/mbostock/d3" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                      <li><a href="https://github.com/mbostock/d3/wiki/Gallery" title="Gallery">Gallery</a></li>
-                      <li><a href="https://github.com/mbostock/d3/wiki/Tutorials" title="Tutorials">Tutorials</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card code charts">
-                <div class="front">
-                  <img src="media/images/degrafa_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Degrafa</h3>
-                    <p>A powerful declarative graphics framework for rich user interfaces, data visualizations and mapping.</p>
-                    <p><a href="http://www.degrafa.org" title="Official Website">http://www.degrafa.org</a></p>
-                </div>
-                <div class="back">
-                  <h3>Degrafa</h3>
-                    <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>Flash<br/>
-                    <strong>License: </strong>MIT<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://www.degrafa.org" title="Official Website">Website</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card code charts">
-                <div class="front">
-                  <img src="media/images/envision_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Envision.js</h3>
-                    <p>A library for creating fast, dynamic and interactive time series visualizations.</p>
-                    <p><a href="http://www.humblesoftware.com/envision" title="Official Website">http://www.humblesoftware.com/envision</a></p>
-                </div>
-                <div class="back">
-                  <h3>Envision.js</h3>
-                    <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>JavaScript<br/>
-                    <strong>License: </strong>MIT<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://www.humblesoftware.com/envision" title="Official Website">Website</a></li>
-                      <li><a href="https://github.com/HumbleSoftware/envisionjs" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card code charts">
-                <div class="front">
-                  <img src="media/images/js_infovis_toolkit_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">JavaScript InfoVis Toolkit</h3>
-                    <p>A Javascript library that provides tools for creating interactive data visualizations for the web.</p>
-                    <p><a href="http://thejit.org/" title="Official Website">http://thejit.org</a></p>
-                </div>
-                <div class="back">
-                  <h3>JavaScript InfoVis Toolkit</h3>
-                    <p>
-                    <strong>Type: </strong>Toolkit<br/>
-                    <strong>Technology: </strong>JavaScript, Python<br/>
-                    <strong>License: </strong>MIT<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://thejit.org" title="Official Website">Website</a></li>
-                      <li><a href="https://github.com/philogb/jit" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                      <li><a href="https://groups.google.com/forum/?fromgroups#!forum/javascript-information-visualization-toolkit" title="Google Group">Google Group</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card maps code">
-                <div class="front">
-                  <img src="media/images/cloudmade_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Leaflet</h3>
-                    <p>A lightweight JavaScript library for making tile-based interactive maps for desktop and mobile browsers.</p>
-                    <p><a href="http://leaflet.cloudmade.com" title="Official Website">http://leaflet.cloudmade.com</a></p>
-                </div>
-                <div class="back">
-                  <h3>Leaflet</h3>
-                    <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>JavaScript<br/>
-                    <strong>License: </strong>BSD<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="#" title="Official Website">Website</a></li>
-                      <li><a href="https://github.com/CloudMade/Leaflet" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                      <li><a href="#" title="Official Website">Website</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card maps code">
-                <div class="front">
-                  <img src="media/images/mapbox_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">MapBox</h3>
-                    <p>A web platform for hosting custom designed map tiles and a set of open source tools to produce them.</p>
-                    <p><a href="http://mapbox.com" title="Official Website">http://mapbox.com</a></p>
-                </div>
-                <div class="back">
-                  <h3>MapBox</h3>
-                    <p>
-                    <strong>Type: </strong>Platform<br/>
-                    <strong>Technology: </strong>JavaScript<br/>
-                    <strong>License: </strong><a href="https://github.com/mapbox" title="GitHub Repository" class="github_repository">Various</a><br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://mapbox.com" title="Official Website">Website</a></li>
-                      <li><a href="https://github.com/mapbox" title="GitHub User">GitHub User</a></li>
-                      <li><a href="http://mapbox.com/tilemill/" title="TileMill">TileMill</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card maps code">
-                <div class="front">
-                  <img src="media/images/modestmaps_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Modest Maps</h3>
-                    <p>A display and interaction library for tile-based maps in Flash, JavaScript and Python.</p>
-                    <p><a href="http://modestmaps.com" title="Official Website">http://modestmaps.com</a></p>
-                </div>
-                <div class="back">
-                  <h3>Modest Maps</h3>
-                    <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>JavaScript, Python, Processing, Flash, PHP, Cinder, OpenFrameworks<br/>
-                    <strong>License: </strong>BSD<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://modestmaps.com/" title="Official Website">Website</a></li>
-                      <li><a href="https://github.com/stamen/modestmaps-js" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                      <li><a href="http://mapbox.com/wax/" title="Extension: Wax">Extension: Wax</a></li>
-                      <li><a href="http://prag.ma/code/htmapl/" title="Extension: HTMAPL">Extension: HTMAPL</a></li>
-                      <li><a href="http://mapbox.com/easey/" title="Extension: Easey">Extension: Easey</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card code charts">
-                <div class="front">
-                  <img src="media/images/nodebox_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">NodeBox</h3>
-                    <p>A desktop application that lets you create generative, static, animated or interactive visuals.</p>
-                    <p><a href="http://nodebox.net" title="Official Website">http://nodebox.net</a></p>
-                </div>
-                <div class="back">
-                  <h3>NodeBox</h3>
-                    <p>
-                    <strong>Type: </strong>Desktop Application<br/>
-                    <strong>Technology: </strong>Python<br/>
-                    <strong>License: </strong>GPL<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://beta.nodebox.net" title="Official Website">Website</a></li>
-                      <li><a href="https://github.com/nodebox/nodebox" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                      <li><a href="http://beta.nodebox.net" title="Reference">Reference</a></li>
-                      <li><a href="http://beta.nodebox.net/documentation/tutorial/getting-started.html" title="Getting Started">Getting Started</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card maps code">
-                <div class="front">
-                  <img src="media/images/polymaps_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Polymaps</h3>
-                    <p>A library for making dynamic, interactive maps with image- and vector-based tiles.</p>
-                    <p><a href="http://polymaps.org" title="Official Website">http://polymaps.org</a></p>
-                </div>
-                <div class="back">
-                  <h3>Polymaps</h3>
-                    <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>JavaScript<br/>
-                    <strong>License: </strong>BSD<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://polymaps.org" title="Official Website">Website</a></li>
-                      <li><a href="http://polymaps.org/ex/" title="Examples">Examples</a></li>
-                      <li><a href="https://github.com/simplegeo/polymaps" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card code charts">
-                <div class="front">
-                  <img src="media/images/prefuse_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Prefuse</h3>
-                    <p>A set of software tools for creating rich interactive data visualizations in Java.</p>
-                    <p><a href="http://prefuse.org" title="Official Website">http://prefuse.org</a></p>
-                  
-                </div>
-                <div class="back">
-                  <h3>Prefuse</h3>
-                    <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>Java<br/>
-                    <strong>License: </strong>BSD<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://prefuse.org" title="Official Website">Website</a></li>
-                      <li><a href="https://github.com/prefuse/Prefuse" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card code charts">
-                <div class="front">
-                  <img src="media/images/prefuse_flare_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Flare</h3>
-                    <p>A set of software tools for creating rich interactive data visualizations in ActionScript.</p>
-                    <p><a href="http://flare.prefuse.org" title="Official Website">http://flare.prefuse.org</a></p>
-                </div>
-                <div class="back">
-                  <h3>Flare</h3>
-                    <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>Flash<br/>
-                    <strong>License: </strong>BSD<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://flare.prefuse.org/" title="Official Website">Website</a></li>
-                      <li><a href="https://github.com/prefuse/Flare" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card code charts">
-                <div class="front">
-                  <img src="media/images/processing_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Processing</h3>
-                    <p>An open source programming language and environment to create images, animations, and interactions.</p>
-                    <p><a href="http://processing.org" title="Official Website">http://processing.org</a></p>
-                </div>
-                <div class="back">
-                  <h3>Processing</h3>
-                    <p>
-                    <strong>Type: </strong>Programming Language<br/>
-                    <strong>Technology: </strong>Processing, Java<br/>
-                    <strong>License: </strong>GPL<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://processing.org/" title="Official Website">Website</a></li>
-                      <li><a href="http://code.google.com/p/processing/" title="Google Code">Google Code</a></li>
-                      <li><a href="http://www.openprocessing.org/" title="Open Processing">Open Processing</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card code charts">
-                <div class="front">
-                  <img src="media/images/processingjs_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Processing.js</h3>
-                    <p>The sister project of Processing that makes projects work using web standards and without any plug-ins.</p>
-                    <p><a href="http://processingjs.org" title="Official Website">http://processingjs.org</a></p>
-                </div>
-                <div class="back">
-                  <h3>Processing.js</h3>
-                    <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>JavaScript<br/>
-                    <strong>License: </strong>MIT<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://processingjs.org" title="Official Website">Website</a></li>
-                      <li><a href="https://github.com/processing-js/processing-js/" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card code charts">
-                <div class="front">
-                  <img src="media/images/protovis_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Protovis</h3>
-                    <p>A library that composes custom views of data with simple marks such as bars and dots.</p>
-                    <p><a href="http://protovis.org" title="Official Website">http://protovis.org</a></p>
-                </div>
-                <div class="back">
-                  <h3>Protovis</h3>
-                    <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>JavaScript<br/>
-                    <strong>License: </strong>BSD<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://mbostock.github.com/protovis/" title="Official Website">Website</a></li>
-                      <li><a href="https://github.com/mbostock/protovis" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card code charts data">
-                <div class="front">
-                  <img src="media/images/r_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">R</h3>
-                    <p>A software environment for statistical computing and graphical techniques.</p>
-                    <p><a href="http://www.r-project.org" title="Official Website">http://www.r-project.org</a></p>
-                </div>
-                <div class="back">
-                  <h3>R</h3>
-                    <p>
-                    <strong>Type: </strong>Programming Language<br/>
-                    <strong>Technology: </strong>R<br/>
-                    <strong>License: </strong>GPL<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://www.r-project.org" title="Official Website">Website</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card code charts">
-                <div class="front">
-                  <img src="media/images/raphaeljs_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Raphaël</h3>
-                    <p>A small library that simplifies working with vector graphics on the web.</p>
-                    <p><a href="http://raphaeljs.com" title="Official Website">http://raphaeljs.com</a></p>
-                </div>
-                <div class="back">
-                  <h3>Raphaël</h3>
-                  <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>JavaScript<br/>
-                    <strong>License: </strong>MIT<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://raphaeljs.com" title="Official Website">Website</a></li>
-                      <li><a href="http://raphaeljs.com/reference.html" title="Reference">Reference</a></li>
-                      <li><a href="http://raphaeljs.com/reference.html" title="gRaphaël">gRaphaël — Charting Library</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card code charts">
-                <div class="front">
-                  <img src="media/images/rickshaw_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Rickshaw</h3>
-                    <p>A library for creating interactive time series graphs based on D3.js.</p>
-                    <p><a href="http://code.shutterstock.com/rickshaw/" title="Official Website">http://code.shutterstock.com/rickshaw</a></p>
-                </div>
-                <div class="back">
-                  <h3>Rickshaw</h3>
-                    <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>JavaScript<br/>
-                    <strong>License: </strong>MIT<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://code.shutterstock.com/rickshaw/" title="Official Website">Website</a></li>
-                      <li><a href="https://github.com/shutterstock/rickshaw" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card code data">
-                <div class="front">
-                  <img src="media/images/tungle_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Tangle</h3>
-                    <p>A library that allow to interactively explore, play, and see the document update immediately.</p>
-                    <p><a href="http://worrydream.com/Tangle" title="Official Website">http://worrydream.com/Tangle</a></p>
-                </div>
-                <div class="back">
-                  <h3>Tangle</h3>
-                    <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>JavaScript<br/>
-                    <strong>License: </strong>MIT<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://worrydream.com/Tangle/" title="Official Website">Website</a></li>
-                      <li><a href="https://github.com/worrydream/Tangle" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                      <li><a href="http://worrydream.com/ExplorableExplanations/" title="Reactive Documents">Reactive Documents</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card maps code">
-                <div class="front">
-                  <img src="media/images/kartograph_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Kartograph</h3>
-                    <p>A simple and lightweight framework for creating beautiful, interactive vector maps.</p>
-                    <p><a href="http://kartograph.org/" title="Official Website">http://kartograph.org</a></p>
-                </div>
-                <div class="back">
-                  <h3>Kartograph</h3>
-                    <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>Python, JavaScript<br/>
-                    <strong>License: </strong>AGPL<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://kartograph.org/" title="Official Website">Website</a></li>
-                      <li><a href="https://github.com/kartograph/kartograph.js" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card data">
-                <div class="front">
-                  <img src="media/images/datawrangler_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">DataWrangler</h3>
-                    <p>An interactive web application for data cleaning and transformation.</p>
-                    <p><a href="http://vis.stanford.edu/wrangler/" title="Official Website">http://vis.stanford.edu/wrangler</a></p>
-                </div>
-                <div class="back">
-                  <h3>DataWrangler</h3>
-                    <p>
-                    <strong>Type: </strong>Web Application<br/>
-                    <strong>Technology: </strong>HTML<br/>
-                    <strong>License: </strong>Free to use<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://vis.stanford.edu/wrangler/" title="Official Website">Website</a></li>
-                      <li><a href="http://vis.stanford.edu/papers/wrangler" title="Research Paper">Research Paper</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card charts code">
-                <div class="front">
-                  <img src="media/images/paper_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Paper.js</h3>
-                    <p>A vector graphics scripting framework in a well designed, consistent and clean programming interface.</p>
-                    <p><a href="http://paperjs.org/" title="Official Website">http://paperjs.org</a></p>
-                </div>
-                <div class="back">
-                  <h3>Paper.js</h3>
-                    <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>JavaScript<br/>
-                    <strong>License: </strong>MIT<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://paperjs.org/" title="Official Website">Website</a></li>
-                      <li><a href="https://github.com/paperjs/paper.js" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card data">
-                <div class="front">
-                  <img src="media/images/mrdataconverter_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Mr. Data Converter</h3>
-                    <p>A simple console that converts Excel data into web-friendly formats, including HTML, JSON and XML.</p>
-                    <p><a href="http://shancarter.com/data_converter/" title="Official Website">http://shancarter.com/data_converter</a></p>
-                </div>
-                <div class="back">
-                  <h3>Mr. Data Converter</h3>
-                    <p>
-                    <strong>Type: </strong>Web Application<br/>
-                    <strong>Technology: </strong>HTML<br/>
-                    <strong>License: </strong>Free to use<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://shancarter.com/data_converter/" title="Official Website">Website</a></li>
-                      <li><a href="https://github.com/shancarter/Mr-Data-Converter" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card charts code">
-                <div class="front">
-                  <img src="media/images/cubism_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Cubism.js</h3>
-                    <p>A library for creating interactive time series and horizon graphs based on D3.js</p>
-                    <p><a href="http://square.github.com/cubism/" title="Official Website">http://square.github.com/cubism/</a></p>
-                </div>
-                <div class="back">
-                  <h3>Cubism.js</h3>
-                    <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>JavaScript<br/>
-                    <strong>License: </strong>Apache<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://square.github.com/cubism/" title="Official Website">Website</a></li>
-                      <li><a href="https://github.com/square/cubism" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                      <li><a href="http://square.github.com/cube/" title="Cube Data Source" class="github_repository">Cube Data Source</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card color code">
-                <div class="front">
-                  <img src="media/images/chroma_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Chroma.js</h3>
-                    <p>Interactive color space explorer that allows to preview a set of linear interpolated equidistant colors.</p>
-                    <p><a href="http://vis4.net/labs/185" title="Official Website">http://vis4.net/labs/185</a></p>
-                </div>
-                <div class="back">
-                  <h3>Chroma.js</h3>
-                    <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>JavaScript<br/>
-                    <strong>License: </strong>GPL<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://vis4.net/labs/185" title="Official Website">Website</a></li>
-                      <li><a href="http://vis4.net/blog/posts/avoid-equidistant-hsv-colors/" title="Article: How To Avoid Equidistant HSV Colors">Blog Post</a></li>
-                      <li><a href="https://github.com/gka/chroma.js" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card color">
-                <div class="front">
-                  <img src="media/images/colorbrewer_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">ColorBrewer</h3>
-                    <p>A web tool for selecting colors for maps.</p>
-                    <p><a href="http://colorbrewer2.org/" title="Official Website">http://colorbrewer2.org</a></p>
-                </div>
-                <div class="back">
-                  <h3>ColorBrewer</h3>
-                    <p>
-                    <strong>Type: </strong>Web Application & Library<br/>
-                    <strong>Technology: </strong>JavaScript, Flash<br/>
-                    <strong>License: </strong>Apache<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://colorbrewer2.org/" title="Official Website">Website</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card charts">
-                <div class="front">
-                  <img src="media/images/circos_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Circos</h3>
-                    <p>A software package for visualizing data in a circular layout.</p>
-                    <p><a href="http://circos.ca/" title="Official Website">http://circos.ca</a></p>
-                </div>
-                <div class="back">
-                  <h3>Circos</h3>
-                    <p>
-                    <strong>Type: </strong>Desktop Application<br/>
-                    <strong>Technology: </strong>Perl<br/>
-                    <strong>License: </strong>GPL<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://circos.ca/" title="Official Website">Website</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card maps">
-                <div class="front">
-                  <img src="media/images/cartodb_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">CartoDB</h3>
-                    <p>A web service for mapping, analyzing and building applications with data.</p>
-                    <p><a href="http://cartodb.com/" title="Official Website">http://cartodb.com</a></p>
-                </div>
-                <div class="back">
-                  <h3>CartoDB</h3>
-                    <p>
-                    <strong>Type: </strong>Web Application<br/>
-                    <strong>Technology: </strong>JavaScript<br/>
-                    <strong>License: </strong>Commercial<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://cartodb.com" title="Official Website">Website</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card data code">
-                <div class="front">
-                  <img src="media/images/reclinejs_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Recline.js</h3>
-                    <p>A simple but powerful library for building data applications in pure JavaScript and HTML.</p>
-                    <p><a href="http://reclinejs.com/" title="Official Website">http://reclinejs.com</a></p>
-                </div>
-                <div class="back">
-                  <h3>Recline.js</h3>
-                    <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>JavaScript<br/>
-                    <strong>License: </strong>MIT<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://reclinejs.com/" title="Official Website">Website</a></li>
-                      <li><a href="https://github.com/okfn/recline/" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card charts code">
-                <div class="front">
-                  <img src="media/images/peity_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Peity</h3>
-                    <p>A simple jQuery plugin that converts an element's content into a simple mini pie, line or bar chart.</p>
-                    <p><a href="http://benpickles.github.com/peity/" title="Official Website">http://benpickles.github.com/peity</a></p>
-                </div>
-                <div class="back">
-                  <h3>Peity</h3>
-                    <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>JavaScript<br/>
-                    <strong>License: </strong>MIT<br/>
-                  </p>
-                    <h4>Links</h4>
-                    <ul>
-                      <li><a href="http://benpickles.github.com/peity/" title="Official Website">Website</a></li>
-                      <li><a href="https://github.com/benpickles/peity" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card maps code">
-                <div class="front">
-                  <img src="media/images/unfolding_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Unfolding</h3>
-                    <p>A library to create interactive maps and geovisualizations in Processing and Java.</p>
-                    <p><a href="http://unfoldingmaps.org" title="Official Website">http://unfoldingmaps.org</a></p>
-                </div>
-                <div class="back">
-                  <h3>Unfolding</h3>
-                  <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>Java<br/>
-                    <strong>License: </strong>MIT<br/>
-                  </p>
-                  <h4>Links</h4>
-                  <ul>
-                    <li><a href="http://unfoldingmaps.org" title="Official Website">Website</a></li>
-                    <li><a href="https://github.com/tillnagel/unfolding" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card color">
-                <div class="front">
-                  <img src="media/images/iwanthue_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">I Want Hue</h3>
-                    <p>A web application to generate and refine palettes of optimally distinct colors.</p>
-                    <p><a href="http://tools.medialab.sciences-po.fr/iwanthue/" title="Official Website">http://tools.medialab.sciences-po.fr/iwanthue</a></p>
-                </div>
-                <div class="back">
-                  <h3>I Want Hue</h3>
-                  <p>
-                    <strong>Type: </strong>Web Application<br/>
-                    <strong>Technology: </strong>HTML<br/>
-                    <strong>License: </strong>Free to use<br/>
-                  </p>
-                  <h4>Links</h4>
-                  <ul>
-                    <li><a href="http://tools.medialab.sciences-po.fr/iwanthue/" title="Official Website">Website</a></li>
-                    <li><a href="https://github.com/medialab/iwanthue" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card data code">
-                <div class="front">
-                  <img src="media/images/tabula_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Tabula</h3>
-                    <p>A tool to extract CSV formatted data from text tables in PDF documents.</p>
-                    <p><a href="http://tabula.nerdpower.org" title="Official Website">http://tabula.nerdpower.org</a></p>
-                </div>
-                <div class="back">
-                  <h3>Tabula</h3>
-                  <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>Javascript & Ruby<br/>
-                    <strong>License: </strong>MIT<br/>
-                  </p>
-                  <h4>Links</h4>
-                  <ul>
-                    <li><a href="http://tabula.nerdpower.org" title="Official Website">Website</a></li>
-                    <li><a href="https://github.com/jazzido/tabula" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card data">
-                <div class="front">
-                  <img src="media/images/mrnester_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Mr. Nester</h3>
-                    <p>A simple console for learning and experimenting with d3.js data nesting.</p>
-                    <p><a href="http://bl.ocks.org/shancarter/raw/4748131/" title="Official Website">http://bl.ocks.org/shancarter/raw/4748131</a></p>
-                </div>
-                <div class="back">
-                  <h3>Mr. Nester</h3>
-                  <p>
-                    <strong>Type: </strong>Web Application<br/>
-                    <strong>Technology: </strong>Javascript<br/>
-                    <strong>License: </strong>Free to use<br/>
-                  </p>
-                  <h4>Links</h4>
-                  <ul>
-                    <li><a href="http://bl.ocks.org/shancarter/raw/4748131/" title="Official Website">Website</a></li>
-                    <li><a href="https://gist.github.com/shancarter/4748131" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card data">
-                <div class="front">
-                  <img src="media/images/svg_crowbar_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">SVG Crowbar</h3>
-                    <p>A bookmarklet that extracts SVG nodes from an HTML document into a SVG file.</p>
-                    <p><a href="http://nytimes.github.io/svg-crowbar" title="Official Website">http://nytimes.github.io/svg-crowbar</a></p>
-                </div>
-                <div class="back">
-                  <h3>SVG Crowbar</h3>
-                  <p>
-                    <strong>Type: </strong>Bookmarklet<br/>
-                    <strong>Technology: </strong>Javascript<br/>
-                    <strong>License: </strong>MIT<br/>
-                  </p>
-                  <h4>Links</h4>
-                  <ul>
-                    <li><a href="http://nytimes.github.io/svg-crowbar" title="Official Website">Website</a></li>
-                    <li><a href="https://github.com/NYTimes/svg-crowbar" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card charts code">
-                <div class="front">
-                  <img src="media/images/vega_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Vega</h3>
-                    <p>A visualization grammar, a declarative format for creating, saving and sharing visualization designs.</p>
-                    <p><a href="http://trifacta.github.io/vega/" title="Official Website">http://trifacta.github.io/vega</a></p>
-                </div>
-                <div class="back">
-                  <h3>Vega</h3>
-                  <p>
-                    <strong>Type: </strong>Library<br/>
-                    <strong>Technology: </strong>Javascript<br/>
-                    <strong>License: </strong>BSD<br/>
-                  </p>
-                  <h4>Links</h4>
-                  <ul>
-                    <li><a href="http://trifacta.github.io/vega/" title="Official Website">Website</a></li>
-                    <li><a href="https://github.com/trifacta/vega" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card charts code">
-                <div class="front">
-                  <img src="media/images/nvd3_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">NVD3.js</h3>
-                    <p>A collection of re-usable charts and chart components for d3.js.</p>
-                    <p><a href="http://nvd3.org" title="Official Website">http://nvd3.org</a></p>
-                </div>
-                <div class="back">
-                  <h3>NVD3.js</h3>
-                  <p>
-                    <strong>Type: </strong>Bookmarklet<br/>
-                    <strong>Technology: </strong>Javascript<br/>
-                    <strong>License: </strong>Apache<br/>
-                  </p>
-                  <h4>Links</h4>
-                  <ul>
-                    <li><a href="http://nvd3.org" title="Official Website">Website</a></li>
-                    <li><a href="https://github.com/novus/nvd3" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card charts">
-                <div class="front">
-                  <img src="media/images/cytoscape_thumbnail.png" width="225" height="140">
-                  <h3 class="tool_name">Cytoscape</h3>
-                    <p>An application for visualizing complex networks and integrating these with any type of attribute data.</p>
-                    <p><a href="http://www.cytoscape.org" title="Official Website">http://www.cytoscape.org</a></p>
-                </div>
-                <div class="back">
-                  <h3>Cytoscape</h3>
-                  <p>
-                    <strong>Type: </strong>Application<br/>
-                    <strong>Technology: </strong>Java<br/>
-                    <strong>License: </strong>GPL<br/>
-                  </p>
-                  <h4>Links</h4>
-                  <ul>
-                    <li><a href="http://www.cytoscape.org" title="Official Website">Website</a></li>
-                    <li><a href="https://github.com/cytoscape" title="GitHub Repository" class="github_repository">GitHub Repository</a></li>
-                  </ul>
-                </div>
-              </div>
+  </nav><!-- #navigation -->
+  <div class="content mth">
+    <div class="content__container">
+      <div class="cards__deck">
+        <div class="cards">
+          <div class="card maps">
+            <div class="card__front">
+              <img class="card__image" src="media/images/geo_common_thumbnail.png" width="225" height="140">
+              <h3 class="card__title">GeoCommons</h3>
+              <p class="card__description">A public community and set of tools to access, visualize and analyze data with compelling map visualizations.</p>
+              <p><a class="card__source" href="http://geocommons.com/" title="Official Website"><span class="icon-link"></span> http://geocommons.com</a></p>
             </div>
-          </div><!-- .article -->
-        </div><!-- .section -->
-        <div id="footer">
-          <div id="about" class="section">
-            <div class="section_heading">
-              <h3 class="tool_name">About</h3>
-            </div><!-- .section_heading -->
-            <p class="lead">Datavisualization.ch Selected Tools is a collection of tools that we, the people behind <a href="/">Datavisualization.ch</a>, work with on a daily basis and recommend warmly. This is not a list of everything out there, but instead a thoughtfully curated selection of our favourite tools that will make your life easier creating meaningful and beautiful data visualizations.</p>
-          </div><!-- #about -->
-          <div id="share" class="section">
-            <div class="section_heading">
-              <h3 class="tool_name">Share</h3>
-            </div><!-- .section_heading -->
-            <ul>
-              <li>
-                <a href="https://twitter.com/share" class="twitter-share-button" data-via="datavis">Tweet</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-              </li>
-              <li>
-                <div class="fb-like" data-send="false" data-layout="button_count" data-width="240" data-show-faces="false" data-font="arial"></div>
-              </li>
-              <li>
-                <g:plusone size="medium" annotation="inline" width="240"></g:plusone>
-              </li>
-            </ul>
-          </div><!-- #share -->
-        </div><!-- #footer -->
-      </div><!-- #main -->
+            <div class="card__back">
+              <h3 class="card__back__title">GeoCommons</h3>
+              <p class="card__back__description">
+              <strong>Type: </strong>Web Application &amp; API<br/>
+              <strong>Technology: </strong>JavaScript, Ruby<br/>
+              <strong>License: </strong><a href="http://geocommons.com/help/Open_Source"><span class="icon-link"></span> Various</a><br/>
+            </p>
+              <h4 class="links__heading">Links</h4>
+              <ul class="links__list">
+                <li class="links__item"><a href="http://geocommons.com/" title="Official Website"><span class="icon-link"></span> Website</a></li>
+                <li class="links__item"><a href="http://geocommons.com/api/" title="API Documentation"><span class="icon-link"></span> API Documentation</a></li>
+                <li class="links__item"><a href="http://github.com/geocommons/" title="GitHub User"><span class="icon-link"></span> GitHub User</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card maps charts data">
+            <div class="card__front">
+              <img class="card__image" src="media/images/google_fusion_table_thumbnail.png" width="225" height="140">
+              <h3 class="card__title">Google Fusion Tables</h3>
+              <p class="card__description">A web application that makes it easy to host, manage, collaborate on, visualize, and publish data tables.</p>
+              <p><a class="card__source" href="http://www.google.com/fusiontables" title="Official Website"><span class="icon-link"></span> http://www.google.com/fusiontables</a></p>
+            </div>
+            <div class="card__back">
+              <h3 class="card__back__title">Google Fusion Tables</h3>
+              <p class="card__back__description">
+              <strong>Type: </strong>Web Application &amp; API<br/>
+              <strong>Technology: </strong>JavaScript, Flash<br/>
+              <strong>License: </strong>Free to use<br/>
+            </p>
+              <h4 class="links__heading">Links</h4>
+              <ul class="links__list">
+                <li class="links__item"><a href="http://www.google.com/fusiontables/" title="Official Website"><span class="icon-link"></span> Website</a></li>
+                <li class="links__item"><a href="https://sites.google.com/site/fusiontablestalks/stories/" title="Example Gallery"><span class="icon-link"></span> Example Gallery</a></li>
+                <li class="links__item"><a href="https://developers.google.com/fusiontables/" title="API Documentation"><span class="icon-link"></span> API Documentation</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card maps charts">
+            <div class="card__front">
+              <img class="card__image" src="media/images/google_chart_tools_thumbnail.png" width="225" height="140">
+              <h3 class="card__title">Google Chart Tools</h3>
+              <p class="card__description">A collection of simple to use,  customizable and free to use interactive charts and data tools.</p>
+              <p><a class="card__source" href="https://developers.google.com/chart" title="Official Website"><span class="icon-link"></span> https://developers.google.com/chart</a></p>
+            </div>
+            <div class="card__back">
+              <h3 class="card__back__title">Google Chart Tools</h3>
+              <p class="card__back__description">
+              <strong>Type: </strong>Library<br/>
+              <strong>Technology: </strong>JavaScript<br/>
+              <strong>License: </strong>Free to use<br/>
+            </p>
+              <h4 class="links__heading">Links</h4>
+              <ul class="links__list">
+                <li class="links__item"><a href="https://developers.google.com/chart/" title="Official Website"><span class="icon-link"></span> Website</a></li>
+                <li class="links__item"><a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/" title="Charts Gallery"><span class="icon-link"></span> Charts Gallery</a></li>
+                <li class="links__item"><a href="http://code.google.com/apis/ajax/playground/?type=visualization/" title="Code Playground"><span class="icon-link"></span> Code Playground</a></li>
+                <li class="links__item"><a href="https://google-developers.appspot.com/chart/interactive/docs/reference/" title="API Reference"><span class="icon-link"></span> API Reference</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div><!-- .container -->
   </div><!-- #content -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="col3of4">
+        <section class="footer__section footer__section--about">
+          <h3 class="footer__section__heading">About</h3>
+          <p class="lead">Datavisualization.ch Selected Tools is a collection of tools that we, the people behind <a href="/">Datavisualization.ch</a>, work with on a daily basis and recommend warmly. This is not a list of everything out there, but instead a thoughtfully curated selection of our favourite tools that will make your life easier creating meaningful and beautiful data visualizations.</p>
+        </section>
+      </div>
+      <div class="col1of4">
+        <section class="footer__section footer__section--share">
+          <h3 class="footer__section__heading">Share</h3>
+          <ul class="share__list">
+            <li class="share__list__item">
+              <a href="https://twitter.com/share" class="twitter-share-button" data-via="datavis">Tweet</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </li>
+            <li class="share__list__item">
+              <div class="fb-like" data-send="false" data-layout="button_count" data-width="240" data-show-faces="false" data-font="arial"></div>
+            </li>
+            <li class="share__list__item">
+              <g:plusone size="medium" annotation="inline" width="240"></g:plusone>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </footer>
   <!-- ——————————————————————————————————————————————————————————————————— JS -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/jquery.isotope/jquery.isotope.min.js"></script>

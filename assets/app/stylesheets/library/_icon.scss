@@ -1,0 +1,4 @@
+@mixin icon($pos: 0px) {
+  text-indent: 21px;
+  background: url("../images/icon_sprite.png") 0 $pos no-repeat; 
+}

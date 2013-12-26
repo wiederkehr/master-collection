@@ -1,13 +1,13 @@
 $(document).ready(function(){
 	/* ISOTOPE SETUP
 	/////////////////////////////////////////////////////////////////*/
-	var $container = $('#cards');
+	var $container = $('.content__container');
 	$container.isotope({
 	  itemSelector: '.card',
     layoutMode: 'cellsByRow',
     getSortData : {
       name : function ( $elem ) {
-        var name = $elem.find('.tool_name').text();
+        var name = $elem.find('.card__title').text();
         return name;
       }
     },
@@ -22,7 +22,7 @@ $(document).ready(function(){
   var filters = {};
 
   // filter buttons
-  $('#nav li a').click(function(){
+  $('.navigation__link').click(function(){
     var $this = $(this);
     if ( $this.hasClass('selected') ) {
       return;
@@ -46,9 +46,9 @@ $(document).ready(function(){
   
   /* QUICKSEARCH
   /////////////////////////////////////////////////////////////////*/
-  $('input#search_field').quicksearch('#deck #cards .card');
+  $('.search__field').quicksearch('.card');
   
-  $('input#search_field').quicksearch('#deck #cards .card', {
+  $('.search__field').quicksearch('.card', {
       'show': function() {
           $(this).addClass('quicksearch-match');
       },
@@ -62,8 +62,8 @@ $(document).ready(function(){
   
   /* CARD FLIP
   /////////////////////////////////////////////////////////////////*/
-  $('.card .front').append('<span class="flip_back"></span>');
-  $('.card .back').append('<span class="flip_front"></span>');
+  $('.card .card__front').append('<span class="card__flip__back"></span>');
+  $('.card .card__back').append('<span class="card__flip__front"></span>');
   
   $('.card').click(function(e){
     if($(this).hasClass('flip')){
@@ -85,26 +85,6 @@ $(document).ready(function(){
   
   /* FIT TEXT
   /////////////////////////////////////////////////////////////////*/
-  $(this).find(".card .front a").fitText(205);
+  $(this).find(".card .card__front a").fitText(205);
   
-  /* GITHUB WATCHERS
-  /////////////////////////////////////////////////////////////////*/
-  function appendWatchers(){
-    if ($(".back a[title='GitHub Repository']", this).length != 0){
-      if ($(this).find('.popularity_chart').length == 0){
-        //$('.back', this).append('<div class="popularity_chart"><span class="popularity_track"><span class="popularity_bar"></span></span></div>');
-      }
-      //query = 'http://www.google.com/search?q=' + $(".front a[title='Official Website']", this).attr('href') + ' #resultStats';
-      //placeholder.load(query);
-      placeholder = $(this).find('.popularity_bar');
-      var github_link = $(".back a.github_repository", this)
-      var query = $(github_link).attr('href');
-      query = query.replace("https://", "http://");
-      query = query.replace("http://github.com/", "http://github.com/api/v2/json/repos/show/");
-      $.getJSON(query, function(json) {
-        $(github_link).html($(github_link).html() + " (<span class='github_watchers'>" + json.repository.watchers + "</span>)");
-      });
-    }
-  };
-  //$('.card').each(appendWatchers);
 });
