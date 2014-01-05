@@ -2077,30 +2077,31 @@ input:focus, textarea:focus {
   /* line 18, components/_footer.scss */
   .footer__section--about .lead {
     color: #999999;
-    font: italic 14px/16px "Georgia", Georgia, serif; }
-    /* line 21, components/_footer.scss */
+    font: italic 12px/18px "Georgia", Georgia, serif;
+    padding-top: 5px; }
+    /* line 22, components/_footer.scss */
     .footer__section--about .lead a {
       color: #999999;
       font-weight: normal; }
-      /* line 24, components/_footer.scss */
+      /* line 25, components/_footer.scss */
       .footer__section--about .lead a:hover {
         color: #333333; }
 
-/* line 32, components/_footer.scss */
+/* line 33, components/_footer.scss */
 .share__list {
   font-size: 11px;
   list-style: none;
   margin: 0;
   padding: 0; }
 
-/* line 38, components/_footer.scss */
+/* line 39, components/_footer.scss */
 .share__list__item {
   list-style: none;
   border-bottom: 1px solid #dddddd;
   padding: 5px 0;
   height: 20px; }
 
-/* line 44, components/_footer.scss */
+/* line 45, components/_footer.scss */
 .share__list__item__link {
   display: block;
   height: 18px;
