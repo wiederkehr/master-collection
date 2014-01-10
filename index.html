@@ -1,185 +1,98 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <!-- ——————————————————————————————————————————————————————————————————— META -->
-  <title>Research Visualization Collection</title>
-  <meta charset="utf-8">
-  <meta name="description" content="Research Visualization Collection">
-  <!-- ——————————————————————————————————————————————————————————————————— CSS -->
-  <link rel="stylesheet" type="text/css" media="all" href="assets/vendor/jquery.qtip/jquery.qtip.css" />
-  <link rel="stylesheet" type="text/css" media="all" href="assets/app/stylesheets/style.css" />
-  <!-- ——————————————————————————————————————————————————————————————————— JS -->
-  <script type="text/javascript">
+	<head>
+		<meta charset="UTF-8">
+		<title>News Graphics Collection</title>
+		<!-- <meta name="viewport" content="width=device-width"> -->
+		
+		<link rel="stylesheet" href="public/css/jquery.slider.min.css">
 
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-6935190-3']);
-    _gaq.push(['_trackPageview']);
+		<link rel="stylesheet" href="public/css/main.min.css">
 
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->		
 
-  </script>
-</head>
-<body>
-  <header id="header" class="header">
-    <div class="header__container">
-      <h1 class="header__title">
-        <a class="header__title__link" href="/" title="Datavisualization.ch">Research Visualization</a>
-      </h1>
-      <h2 class="header__subtitle">Collection</h2>
-      <form method="get" class="search__form">
-        <input type="search" name="s" placeholder="Search…" class="search__field"/>
-      </form>
-    </div><!-- .header__container -->
-  </header><!-- #header -->
-  <nav class="navigation">
-    <div class="navigation__container">
-      <div class="navigation__column navigation__column--primary">
-        <ul class="navigation__list option-set" data-filter-group="type">
-          <li class="navigation__item"><a class="navigation__link" href="#" data-filter="*" title="View all tools" class="selected">All</a></li>
-          <li class="navigation__item"><a class="navigation__link" href="#" data-filter=".maps" title="Tools that help you to plot data on maps.">Maps</a></li>
-          <li class="navigation__item"><a class="navigation__link" href="#" data-filter=".charts" title="Tools to create charts, graphs and diagrams.">Charts</a></li>
-          <li class="navigation__item"><a class="navigation__link" href="#" data-filter=".data" title="Tools that simplify the handling of data.">Data</a></li>
-          <li class="navigation__item"><a class="navigation__link" href="#" data-filter=".color" title="Tools that help you with color selection.">Color</a></li>
-        </ul><!-- #primary_filter -->
-      </div>
-      <div class="navigation__column navigation__column--secondary">
-        <span class="navigation__label" id="secondary_filter_label">Code?</span>
-        <ul class="navigation__list option-set" data-filter-group="code">
-          <li class="navigation__item"><a class="navigation__link" href="#" data-filter="" title="I am happy to write some code on my own." class="selected">&#x2714;</a></li>
-          <li class="navigation__item"><a class="navigation__link" href="#" data-filter=":not('.code')" title="I don't want to bother even looking at programming code.">&#x2718;</a></li>
-      </div>
-      </ul>
-    </div><!-- .container -->
-  </nav><!-- #navigation -->
-  <div class="content mth">
-    <div class="content__container">
-      <div class="cards__deck">
-        <div class="cards">
-          <div class="card maps">
-            <div class="card__front">
-              <img class="card__image" src="media/images/geo_common_thumbnail.png" width="225" height="140">
-              <h3 class="card__title">GeoCommons</h3>
-              <p class="card__description">A public community and set of tools to access, visualize and analyze data with compelling map visualizations.</p>
-              <p><a class="card__source" href="http://geocommons.com/" title="Official Website"><span class="icon-link"></span> http://geocommons.com</a></p>
-            </div>
-            <div class="card__back">
-              <h3 class="card__back__title">GeoCommons</h3>
-              <p class="card__back__description">
-              <strong>Type: </strong>Web Application &amp; API<br/>
-              <strong>Technology: </strong>JavaScript, Ruby<br/>
-              <strong>License: </strong><a href="http://geocommons.com/help/Open_Source"><span class="icon-link"></span> Various</a><br/>
-            </p>
-              <h4 class="links__heading">Links</h4>
-              <ul class="links__list">
-                <li class="links__item"><a href="http://geocommons.com/" title="Official Website"><span class="icon-link"></span> Website</a></li>
-                <li class="links__item"><a href="http://geocommons.com/api/" title="API Documentation"><span class="icon-link"></span> API Documentation</a></li>
-                <li class="links__item"><a href="http://github.com/geocommons/" title="GitHub User"><span class="icon-link"></span> GitHub User</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="card maps charts data">
-            <div class="card__front">
-              <img class="card__image" src="media/images/google_fusion_table_thumbnail.png" width="225" height="140">
-              <h3 class="card__title">Google Fusion Tables</h3>
-              <p class="card__description">A web application that makes it easy to host, manage, collaborate on, visualize, and publish data tables.</p>
-              <p><a class="card__source" href="http://www.google.com/fusiontables" title="Official Website"><span class="icon-link"></span> http://www.google.com/fusiontables</a></p>
-            </div>
-            <div class="card__back">
-              <h3 class="card__back__title">Google Fusion Tables</h3>
-              <p class="card__back__description">
-              <strong>Type: </strong>Web Application &amp; API<br/>
-              <strong>Technology: </strong>JavaScript, Flash<br/>
-              <strong>License: </strong>Free to use<br/>
-            </p>
-              <h4 class="links__heading">Links</h4>
-              <ul class="links__list">
-                <li class="links__item"><a href="http://www.google.com/fusiontables/" title="Official Website"><span class="icon-link"></span> Website</a></li>
-                <li class="links__item"><a href="https://sites.google.com/site/fusiontablestalks/stories/" title="Example Gallery"><span class="icon-link"></span> Example Gallery</a></li>
-                <li class="links__item"><a href="https://developers.google.com/fusiontables/" title="API Documentation"><span class="icon-link"></span> API Documentation</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="card maps charts">
-            <div class="card__front">
-              <img class="card__image" src="media/images/google_chart_tools_thumbnail.png" width="225" height="140">
-              <h3 class="card__title">Google Chart Tools</h3>
-              <p class="card__description">A collection of simple to use,  customizable and free to use interactive charts and data tools.</p>
-              <p><a class="card__source" href="https://developers.google.com/chart" title="Official Website"><span class="icon-link"></span> https://developers.google.com/chart</a></p>
-            </div>
-            <div class="card__back">
-              <h3 class="card__back__title">Google Chart Tools</h3>
-              <p class="card__back__description">
-              <strong>Type: </strong>Library<br/>
-              <strong>Technology: </strong>JavaScript<br/>
-              <strong>License: </strong>Free to use<br/>
-            </p>
-              <h4 class="links__heading">Links</h4>
-              <ul class="links__list">
-                <li class="links__item"><a href="https://developers.google.com/chart/" title="Official Website"><span class="icon-link"></span> Website</a></li>
-                <li class="links__item"><a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/" title="Charts Gallery"><span class="icon-link"></span> Charts Gallery</a></li>
-                <li class="links__item"><a href="http://code.google.com/apis/ajax/playground/?type=visualization/" title="Code Playground"><span class="icon-link"></span> Code Playground</a></li>
-                <li class="links__item"><a href="https://google-developers.appspot.com/chart/interactive/docs/reference/" title="API Reference"><span class="icon-link"></span> API Reference</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div><!-- .container -->
-  </div><!-- #content -->
-  <footer class="footer">
-    <div class="footer__container">
-      <div class="col3of4">
-        <section class="footer__section footer__section--about">
-          <h3 class="footer__section__heading">About</h3>
-          <p class="lead">Research Visualization is a collection of visualizations that strive to shine light on scientific research topics with various visualization techniques. This collection is part of Benjamin Wiederkehr's Master Thesis in the field of Interaction Design at the Zurich University of the Arts.</p>
-        </section>
-      </div>
-      <div class="col1of4">
-        <section class="footer__section footer__section--share">
-          <h3 class="footer__section__heading">Share</h3>
-          <ul class="share__list">
-            <li class="share__list__item">
-              <a href="https://twitter.com/share" class="twitter-share-button" data-via="datavis">Tweet</a>
-              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-            </li>
-            <li class="share__list__item">
-              <div class="fb-like" data-send="false" data-layout="button_count" data-width="240" data-show-faces="false" data-font="arial"></div>
-            </li>
-            <li class="share__list__item">
-              <g:plusone size="medium" annotation="inline" width="240"></g:plusone>
-            </li>
-          </ul>
-        </section>
-      </div>
-    </div>
-  </footer>
-  <!-- ——————————————————————————————————————————————————————————————————— JS -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/jquery.isotope/jquery.isotope.min.js"></script>
-  <script src="assets/vendor/jquery.quicksearch/jquery.quicksearch.js"></script>
-  <script src="assets/vendor/jquery.qtip/jquery.qtip.js"></script>
-  <script src="assets/vendor/jquery.textutils/jquery.textutils.js"></script>
-  <script src="assets/app/javascripts/base.js"></script>
-  <script src="assets/app/javascripts/tools.js"></script>
-  <!-- ——————————————————————————————————————————————————————————————————— SHARING -->
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=141719789255556";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
-  <script type="text/javascript">
-    (function() {
-      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-      po.src = 'https://apis.google.com/js/plusone.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-    })();
-  </script>
-</body>
+	</head>
+	<body>
+
+		<header>
+			<div class='header-wrapper width-constraint'>
+				<h2>Graphics Collection</h2>
+			</div>
+		</header>
+
+		<div class='fixed-menu-wrapper'>
+			<div class='inner-fixed-menu width-constraint'>
+				<div class="total-graphics"> </div>
+				<div class="selected-filters-wrapper"></div>
+			</div>
+		</div>
+    
+  </div>
+
+		<div class='content-wrapper width-constraint'> 
+			<div class="mobile-menu"></div>
+
+			<section class="column-left">
+				<div class="panel-wrapper">
+					<div class='filters-wrapper'>
+						<div class="slider-wrapper"></div>
+					    <div class="search-wrapper"></div>
+
+					</div>
+					<div class='scroll-to-top none fixed'> <span>⇧</span> Scroll to top  <span>⇧</span> </div>
+				</div>
+			</section>
+			
+			<section class="main-content">
+			<noscript> Please enable JavaScript to view this page</noscript>
+				<div class="fixed-main-content">
+					
+
+					<div class="sort-wrapper">
+					</div>
+
+				</div>
+				<div class='graphics-wrapper' id="graphics-wrapper"> </div>
+			</div>
+				
+			</div>
+		</div>
+
+		<footer>
+			<div class="footer-wrapper"></div>
+		</footer>
+
+
+		<div id="tooltip-container">this is my tooltip</div>
+
+
+		<script src="public/js/lib/underscore-min.js"> </script>
+
+		<script src="public/js/lib/jquery.min.js"> </script>
+		<script src="public/js/lib/backbone-min.js"> </script>
+		<script src="public/js/lib/handlebars.min.js"> </script>
+  		<script src="public/js/lib/backbone.queryparams.js"></script>
+		
+
+		<script src="public/js/lib/jquery.slider.min.js"></script>
+		
+
+		<script src="public/js/app.min.js"></script>
+	
+	
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46152617-1', 'marijerooze.nl');
+  ga('send', 'pageview');
+
+</script>
+
+		
+	</body>
 </html>
