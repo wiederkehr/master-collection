@@ -1,6 +1,7 @@
 body {
+	color: #333;
+	font-family: 'Source Sans Pro', sans-serif;
 	margin: 0 auto;
-	font-family: Arial, Helvetica, sans-serif;
 }
 
 ul {
@@ -79,7 +80,6 @@ header h2 {
 	color: #DDDDDD;
 	line-height: 2.2em;
 	margin: 0;
-	font-family: 'Lucida Sans', Arial, sans-serif;
 	font-weight: normal;
 }
 
@@ -120,10 +120,8 @@ a.image-wrapper {
 	overflow: hidden;
 	background: #CCC;
 	border: 1px solid #CCC;
-	border-top-color: #EEE;
-	border-left-color: #EEE;
 	height: 0;
-	padding-bottom: 59%;
+	padding-bottom: 73%;
 	position:relative;
 }
 
@@ -132,7 +130,7 @@ a.image-wrapper:hover{
 }
 
 .inner-graphics-wrapper {
-	max-width: 252px;
+	max-width: 236px;
 	height:100%;
 }
 
@@ -154,7 +152,6 @@ article h2 {
 	font-weight: 200;
 	margin: 8px 0;
 	min-height: 20px;
-	padding-left: 25px;
 }
 
 article h2 span {
@@ -166,14 +163,6 @@ article h2 span {
 	background-repeat: no-repeat;
 	background-position: 2px 5px;
 	display: inline-block;
-}
-
-.gua {
-	background-image: url('../img/assets/favicon_guardian.png');
-}
-
-.nyt {
-	background-image: url('../img/assets/favicon_nytimes.png');
 }
 
 .date {

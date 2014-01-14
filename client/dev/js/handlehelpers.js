@@ -24,7 +24,7 @@ Handlebars.registerHelper("getImgPath", function( data ) {
 	var img = data.thumbnail,
 		newspaper = data.newspaper === "Guardian" ? "guardian" : "nytimes";
 
-	var imgPath	= "http://marijerooze.nl/thesis/graphics/images/" + newspaper + "/"+ img;
+	var imgPath	= "/public/media/"+ img;
   	return imgPath;
 });
 
