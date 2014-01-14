@@ -15,7 +15,6 @@ app.listen( port );
 console.log ( "Started server on port: " + port );
 
 var object_json;
-//var dataPath = 'http://marijerooze.nl/thesis/graphics/API/';
 var dataPath = 'http://localhost:2020/public/data/data.json';
 
 request(dataPath, function (error, response, body) {

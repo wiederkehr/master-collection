@@ -1,20 +1,3 @@
-
-// converts date=20120802 to August, 2013
-var m_names = new Array("January", "February", "March", "April", "May", 
-	"June", "July", "August", "September", "October", "November", "December");
-
-Handlebars.registerHelper("formatDate", function( date ) {
- 	date = String( date );
- 	var year = date.substring( 0, 4 );
-
- 	var month = date.substring(4, 6);
- 	month = month.replace(/^0+/, '');  // regex removes leading zero's
- 	var f_month = m_names[month - 1];	// set month zero based
-
-  	return f_month + ", " + year;
-});
-
-
 /* Image path options
 	http://marijerooze.nl/thesis/graphics/images/guardian/guardian_australiaElections2013.jpg
 	http://marijerooze.nl/thesis/graphics/images/nytimes/nytimes_economytwistandturns.jpg
@@ -87,30 +70,18 @@ APP.Graphic = Backbone.Model.extend ({
 	defaults: {
 		id: "",
 		title: "undefined",
+		creators: "unknown",
 		date: "unknown",
 		source: "unknown",
-		creators: "unknown",
-		favorite: false,
 		thumbnail:"public/img/graphics/test.jpg",
-		news_type: "unknown",
-		annotation: "unknown",
-		flash: "unknown"
-	},
-
-	// rewrite of database values
-	parse: function(response){
-		paper = response.newspaper;
-		newscategory = response.newscategory;
-		
-		if (paper == "guardian") response.newspaper = "gua";
-		if (paper == "Ny Times") response.newspaper ="nyt"; 
-		if (newscategory == "Economy") response.newscategory = "business"; 
-
-		return response;
- 	}
+		focus: "unknown",
+		units: "unknown",
+		linkages: "unknown",
+		objects: "unknown",
+		visualform: "unknown",
+		interaction: "unknown"
+	}
 });
-
-
 
 APP.Graphics = Backbone.Collection.extend ( {
 	model: APP.Graphic,
@@ -160,8 +131,8 @@ APP.Graphics = Backbone.Collection.extend ( {
 	byYear: function( minYear, maxYear ) {
     
       filtered = this.filter( function( graphic ) {
-      	var date = String(graphic.get( "date" )).substring(0,4);
-      	var bool = date >= minYear && date <= maxYear ? true: false;
+      	var year = String(graphic.get( "date" ));
+      	var bool = year >= minYear && year <= maxYear ? true: false;
       	return bool;
      	});
 
@@ -502,9 +473,9 @@ APP.GraphicItemView = Backbone.View.extend({
 
     template: Handlebars.compile(
         '<div class="inner-graphics-wrapper">' +
-                '<a href="{{ url }}" class="image-wrapper" target="_blank" title="{{ title }}" >' +
+                '<a href="{{ source }}" class="image-wrapper" target="_blank" title="{{ title }}" >' +
                     '<img class="graphics-image" src={{getImgPath this}}>' +
-                    '<div class="date">{{formatDate date}}</div>'  + //makes use of registerHelper in handlehelpers.js
+                    '<div class="date">{{ date }}</div>' +
                 '</a>' + 
     		'<h2 class="{{setFavicon newspaper}}"><span>{{title}}</span></h2>' +
         '</div>'
