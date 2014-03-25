@@ -24,7 +24,11 @@ article:nth-child(3n+3) {
   padding-right: 0;
 }
 
-@media (min-width: 200px) and (max-width: 1030px) {
+/*
+FIXME: Changes for presentation
+@media (min-width: 200px) and (max-width: 1024px) {
+*/
+@media (min-width: 200px) and (max-width: 980px) {
   .main-content {
 	margin-left: 0;
   }

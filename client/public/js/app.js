@@ -131,8 +131,8 @@ APP.Graphics = Backbone.Collection.extend ( {
 	byYear: function( minYear, maxYear ) {
     
       filtered = this.filter( function( graphic ) {
-      	var year = String(graphic.get( "date" ));
-      	var bool = year >= minYear && year <= maxYear ? true: false;
+      	var date = String(graphic.get( "date" ));
+      	var bool = date >= minYear && date <= maxYear ? true: false;
       	return bool;
      	});
 
